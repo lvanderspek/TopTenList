@@ -11,6 +11,7 @@ using std::vector;
 class TopTenList
 {
   private:
+    vector<HyperLink> _list;
 
   public:
     void set_at(int index, Hyperlink link);
