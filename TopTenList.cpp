@@ -19,3 +19,9 @@ Hyperlink TopTenList::get(int index)
 {
     return _list[index-1];
 }
+
+void TopTenList::display_forward() {
+}
+
+void TopTenList::display_backward() {
+}
