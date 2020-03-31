@@ -1,9 +1,12 @@
 //Manages a list of top ten hyperlinks
+#include <iostream>
 #include <string>
 #include "TopTenList.h"
 #include "Hyperlink.h"
 
 using std::string;
+using std::endl;
+using std::cout;
 
 TopTenList::TopTenList()
 {
@@ -21,6 +24,9 @@ Hyperlink TopTenList::get(int index)
 }
 
 void TopTenList::display_forward() {
+    for (Hyperlink hl : _list) {
+        cout << hl.text << ' ' << hl.url << endl;
+    }
 }
 
 void TopTenList::display_backward() {
