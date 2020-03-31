@@ -12,10 +12,10 @@ TopTenList::TopTenList()
 
 void TopTenList::set_at(int index, Hyperlink link)
 {
-
+    _list[index-1] = link;
 }
 
 Hyperlink TopTenList::get(int index)
 {
-
+    return _list[index-1];
 }
