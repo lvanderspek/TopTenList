@@ -24,8 +24,9 @@ Hyperlink TopTenList::get(int index)
 }
 
 void TopTenList::display_forward() {
-    for (Hyperlink hl : _list) {
-        cout << hl.text << ' ' << hl.url << endl;
+    for (int i = 1; i <= _list.size(); i++) {
+        Hyperlink hl = get(i);
+        printf("%d. <a href=\"%s\">%s</a>\n", i, hl.url.c_str(), hl.text.c_str());
     }
 }
 
