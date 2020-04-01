@@ -31,8 +31,8 @@ void TopTenList::display_forward() {
 }
 
 void TopTenList::display_backward() {
-    for (int i = _list.size()-1; i >= 0; i--) {
-        Hyperlink hl = _list[i];
-        cout << hl.text << ' ' << hl.url << endl;
+    for (int i = _list.size(); i; i--) {
+        Hyperlink hl = get(i);
+        printf("%d. <a href=\"%s\">%s</a>\n", i, hl.url.c_str(), hl.text.c_str());
     }
 }
