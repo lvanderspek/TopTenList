@@ -10,6 +10,11 @@ int main()
 {
     TopTenList* languages = new TopTenList();
     Gallery* emoticons = new Gallery();
+
+    vector<IDirectionable*> lists;
+    lists.push_back(languages);
+    lists.push_back(emoticons);
+
     Hyperlink cpp;
 
     cpp.text = "C++";
@@ -47,8 +52,10 @@ int main()
     emoticons->add(":(","Frown");
     emoticons->add(":()","Monkey");
 
-    emoticons->display_backward();
-    languages->display_forward();
+    printf("*** displaying lists forward ***\n\n");
+    for (auto list : lists) list->display_forward();
+    printf("\n*** displaying lists backward ***\n\n");
+    for (auto list : lists) list->display_backward();
 
 
 
